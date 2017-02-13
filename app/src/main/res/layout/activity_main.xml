@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.easy.wtool.sdk.demo.batchmsgs.MainActivity">
+    <TextView
+        android:text="本软件基于"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewPrompt"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="?attr/colorButtonNormal" />
+    <TextView
+        android:text="授权码"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewAuthCode"
+        android:layout_below="@+id/textViewPrompt"
+
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="?attr/colorButtonNormal"
+        android:layout_marginTop="12dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text=""
+        android:ems="10"
+        android:id="@+id/editAuthCode"
+        android:layout_below="@+id/textViewAuthCode"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <RadioGroup android:id="@+id/radioGroupWxid"
+        android:contentDescription="WxId"
+        android:layout_below="@+id/editAuthCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editContent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        android:text="监听消息"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonStartMessage"
+        android:layout_marginTop="97dp"
+        android:layout_below="@+id/radioGroupWxid"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:text="好友"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buttonStartMessage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="52dp"
+        android:id="@+id/checkBoxFriend"
+        android:checked="true" />
+
+    <CheckBox
+        android:text="群"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/checkBoxFriend"
+        android:layout_toRightOf="@+id/buttonStartMessage"
+        android:layout_toEndOf="@+id/buttonStartMessage"
+        android:id="@+id/checkBoxChatroom"
+        android:checked="true" />
+
+    <CheckBox
+        android:text="我才回复"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/checkBoxChatroom"
+        android:layout_toRightOf="@+id/checkBoxChatroom"
+        android:layout_toEndOf="@+id/checkBoxChatroom"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:id="@+id/checkBoxAtMe"
+        android:checked="true" />
+
+
+</RelativeLayout>
